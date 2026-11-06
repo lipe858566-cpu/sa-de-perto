@@ -1,0 +1,202 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/archivo";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --color-papel: var(--papel);
+    --color-papel-2: var(--papel-2);
+    --color-tinta: var(--tinta);
+    --color-tinta-suave: var(--tinta-suave);
+    --color-verde-posto: var(--verde-posto);
+    --color-verde-claro: var(--verde-claro);
+    --color-azul-cartilha: var(--azul-cartilha);
+    --color-amarelo-campanha: var(--amarelo-campanha);
+    --color-vermelho-urgencia: var(--vermelho-urgencia);
+    --font-sans: 'Archivo Variable', system-ui, sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* ---------------------------------------------------------------------------
+   Saúde Perto — tokens de tema
+   Direção visual: cartilha impressa de saúde pública brasileira.
+   Faixas de cor sólidas, sem sombras, raio apenas em controles clicáveis.
+   Razões de contraste medidas em 2026-10-23 — ver docs/arquitetura.md §10.
+   --------------------------------------------------------------------------- */
+:root {
+    /* Paleta base */
+    --papel: #FAF8F3;             /* fundo: papel de cartilha           */
+    --papel-2: #F0EDE4;           /* fundo alternado de faixa           */
+    --tinta: #15231D;             /* texto: tinta de impressao          */
+    --verde-posto: #0F5D4A;       /* esmalte de placa de posto          */
+    --azul-cartilha: #1B4D8F;     /* azul de impresso informativo       */
+    --amarelo-campanha: #F2B705;  /* cartaz de campanha                 */
+
+    /* Derivados */
+    --tinta-suave: #4A5A52;
+    --verde-claro: #DCEAE2;
+    --vermelho-urgencia: #B3261E;
+
+    /* Mapeamento para os tokens do shadcn/ui */
+    --background: var(--papel);
+    --foreground: var(--tinta);
+    --card: #FFFFFF;
+    --card-foreground: var(--tinta);
+    --popover: #FFFFFF;
+    --popover-foreground: var(--tinta);
+    --primary: var(--verde-posto);
+    --primary-foreground: var(--papel);
+    --secondary: var(--verde-claro);
+    --secondary-foreground: var(--verde-posto);
+    --muted: var(--papel-2);
+    --muted-foreground: var(--tinta-suave);
+    --accent: var(--verde-claro);
+    --accent-foreground: var(--verde-posto);
+    --destructive: var(--vermelho-urgencia);
+    --border: #D8D3C6;
+    --input: #B8B2A3;
+    --ring: var(--verde-posto);
+
+    /* Raio apenas em controles clicaveis. Faixas e secoes ficam retas. */
+    --radius: 0.375rem;
+
+    --sidebar: var(--papel-2);
+    --sidebar-foreground: var(--tinta);
+    --sidebar-primary: var(--verde-posto);
+    --sidebar-primary-foreground: var(--papel);
+    --sidebar-accent: var(--verde-claro);
+    --sidebar-accent-foreground: var(--verde-posto);
+    --sidebar-border: #D8D3C6;
+    --sidebar-ring: var(--verde-posto);
+}
+
+/* Nenhum alternador de tema foi implementado. Estes valores existem para que a
+   classe .dark nao produza uma interface incoerente caso venha a ser usada. */
+.dark {
+    --papel: #101714;
+    --papel-2: #182320;
+    --tinta: #EDF2EF;
+    --verde-posto: #4FBF9F;
+    --azul-cartilha: #7FAEE8;
+    --amarelo-campanha: #F2B705;
+    --tinta-suave: #A8B8B0;
+    --verde-claro: #1C332B;
+    --vermelho-urgencia: #F2837B;
+
+    --background: var(--papel);
+    --foreground: var(--tinta);
+    --card: var(--papel-2);
+    --card-foreground: var(--tinta);
+    --popover: var(--papel-2);
+    --popover-foreground: var(--tinta);
+    --primary: var(--verde-posto);
+    --primary-foreground: #06120E;
+    --secondary: var(--verde-claro);
+    --secondary-foreground: var(--tinta);
+    --muted: var(--papel-2);
+    --muted-foreground: var(--tinta-suave);
+    --accent: var(--verde-claro);
+    --accent-foreground: var(--tinta);
+    --destructive: var(--vermelho-urgencia);
+    --border: #2A3A34;
+    --input: #3C4F47;
+    --ring: var(--verde-posto);
+
+    --sidebar: var(--papel-2);
+    --sidebar-foreground: var(--tinta);
+    --sidebar-primary: var(--verde-posto);
+    --sidebar-primary-foreground: #06120E;
+    --sidebar-accent: var(--verde-claro);
+    --sidebar-accent-foreground: var(--tinta);
+    --sidebar-border: #2A3A34;
+    --sidebar-ring: var(--verde-posto);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    }
+
+  html {
+    @apply font-sans;
+    /* 18px de base: o publico inclui pessoas idosas e com baixa visao. */
+    font-size: 112.5%;
+    -webkit-text-size-adjust: 100%;
+    }
+
+  body {
+    @apply bg-background text-foreground;
+    line-height: 1.6;
+    }
+
+  /* Foco visivel em tudo que recebe foco. Contraste do anel medido:
+     7.37:1 sobre papel e 6.68:1 sobre papel-2 — acima do minimo 3:1 (RNF04). */
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+    }
+
+  /* Faixas escuras invertem o anel para manter contraste contra o verde. */
+  .faixa-escura :focus-visible {
+    outline-color: var(--papel);
+    }
+
+  h1, h2, h3 {
+    @apply font-heading;
+    line-height: 1.15;
+    text-wrap: balance;
+    }
+
+  p {
+    text-wrap: pretty;
+    }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      }
+    }
+}

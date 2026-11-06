@@ -1,0 +1,23 @@
+SAÚDE PERTO
+
+Projeto completo com login obrigatório, cadastro e recuperação de senha pelo Supabase.
+
+1. Abra esta pasta no VS Code.
+2. Copie o seu .env.local da versão anterior para esta pasta.
+   Se ainda não tiver, crie um arquivo .env.local com as variáveis do .env.example.
+3. No terminal, execute: npm.cmd install
+4. Depois, execute: npm.cmd run dev
+5. Abra o endereço mostrado no terminal (normalmente http://localhost:5173).
+
+O cadastro pede e-mail, telefone, endereço, data de nascimento e senha.
+Telefone, endereço e data de nascimento são salvos nos metadados da conta do Supabase.
+Não é preciso criar uma tabela só para esses três campos.
+
+Para o código de recuperação chegar por e-mail, configure o modelo Reset Password
+com {{ .Token }} no painel Supabase. Veja CONFIGURAR-AUTENTICACAO.md.
+
+Atenção: o package-lock.json veio de uma versão anterior e será sincronizado
+pelo npm.cmd install. O ambiente de preparação não teve acesso ao registro npm,
+portanto o build e os testes completos não foram executados nesta revisão.
+
+As telas de agendamento continuam demonstrativas e não salvam dados em contas.

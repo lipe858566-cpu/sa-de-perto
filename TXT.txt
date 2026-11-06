@@ -1,0 +1,23 @@
+Quero que você instale essa 5 skill usarmos no nosso projeto de front end (enviarei detalhess depois de instalar tudo)
+
+1 https://github-com.translate.goog/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc
+
+2 https://github.com/Egonex-AI/Understand-Anything
+
+3 https://github.com/mrdoob/three.js/
+
+4 https://github.com/motiondivision/motion
+
+5 https://github.com/darkroomengineering/lenis
+
+6 https://github.com/greensock/gsap
+
+7 https://github.com/lucide-icons/lucide
+
+8 https://github.com/uiverse-io/galaxy
+
+9 https://github.com/DavidHDev/react-bits
+
+10 https://github.com/magicuidesign/magicui
+
+11 https://github.com/shadcn-ui/ui
